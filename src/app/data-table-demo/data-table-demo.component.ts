@@ -40,9 +40,8 @@ export class DataTableDemoComponent implements OnInit {
 
   folderEditComplete(){
     console.log("edit is complete");
-    console.log("set flat to false");
+    console.log("set flag to false");
     this.colorEditable = false;
-    
   }
 
 }
