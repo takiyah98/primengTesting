@@ -1,0 +1,29 @@
+<p>
+  data-table-demo works!
+</p>
+<h3 class="first">Basic</h3>
+colorEditable {{colorEditable}}
+
+<p-dataTable [value]="cars" [editable]="true" (onEditComplete)="folderEditComplete()">
+    <p-column field="vin" header="Vin"></p-column>
+    <p-column field="year" header="Year"></p-column>
+    <p-column field="brand" header="Brand"></p-column>
+    <!-- <p-column field="color" header="Color" [editable]="colorEditable"></p-column> -->
+    
+    <p-column field="test" [editable]="isEditable">
+      <ng-template let-row="rowData" let-col pTemplate="body">
+           <span>
+              <input type="button" value="Edit" (click)="edit(row, col)" />
+           </span>
+      </ng-template>
+    </p-column>
+
+    <p-column field="color" [editable]="colorEditable" header="ModuleID">
+      <ng-template let-row="rowData" pTemplate="body">
+          <div *ngIf="!colorEditable">{{row.color}}</div>
+          <div *ngIf="colorEditable">
+            <input type="text" [(ngModel)]="row.color">
+          </div>
+      </ng-template>
+  </p-column>
+</p-dataTable>

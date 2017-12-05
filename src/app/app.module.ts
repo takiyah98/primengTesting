@@ -3,14 +3,24 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { DataTableDemoComponent } from './data-table-demo/data-table-demo.component';
+
+import {ButtonModule} from 'primeng/primeng';
+import {DataTableModule,SharedModule} from 'primeng/primeng';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DataTableDemoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ButtonModule,
+    DataTableModule,
+    SharedModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
