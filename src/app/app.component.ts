@@ -8,7 +8,19 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-  clickedButton(){
-    console.log("button clicked");
+  public mainContentClass = "col-md-10";                                                       ;
+  public column12 = "col-md-12";
+
+  clickToggle(){
+    console.log('clicked button');
+    console.log(this.mainContentClass);
+    if(this.mainContentClass == "col-md-10"){
+      this.mainContentClass = "col-md-12"
+    }
+    else{
+      this.mainContentClass = "col-md-10"
+    }
+
   }
+
 }

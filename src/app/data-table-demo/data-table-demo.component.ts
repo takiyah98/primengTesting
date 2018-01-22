@@ -14,6 +14,7 @@ export class DataTableDemoComponent implements OnInit {
 
   constructor() { }
 
+
   ngOnInit() {
         this.cars = [
           {"brand": "VW", "year": 2012, "color": "Orange", "vin": "dsad231ff"},

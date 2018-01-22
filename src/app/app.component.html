@@ -6,18 +6,32 @@
 </div>
 
 <button type="button">TEST</button>
-<button pButton type="button" label="Click" (click)="clickedButton()"></button>
+<button pButton type="button" label="Click"></button>
 <button  type="button"> BUTTON</button>
 <button type="button" class="btn btn-warning">Left Bootstrap </button>
 <div class="container-fluid testing">
-  <div class="row">
+
+  
+  <div class="row" >
       <p>row1</p>
-      <div class="col-md-2">
-        <p>col2</p>
+      <div class="col-md-2 collapse in" id="sidebar">
+        <p>Collapsible Sidebar</p>
       </div>
-      <div class="col-md-10">
+
+      <!-- <div class="col-md-10" id="mainContent">
          <app-data-table-demo></app-data-table-demo>
-      </div>
+      </div> -->
+
+      <div [className]="mainContentClass"  id="mainContent">
+          <div id="content">
+              <button (click)="clickToggle()" type="button" id="sidebarCollapse" class="btn btn-info navbar-btn" 
+                      data-toggle="collapse" data-target="#sidebar">
+                        <i class="glyphicon glyphicon-align-left"></i>
+              </button>
+           </div>
+          <app-data-table-demo></app-data-table-demo>
+       </div>
+ 
   </div>
 
 </div>
