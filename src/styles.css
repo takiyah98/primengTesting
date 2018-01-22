@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+.testing{
+  margin:auto;
+}
+.testing .row .col-md-2{
+    outline:1px solid purple;
+    height:50px;
+}
+
+
+.testing .row .col-md-10{
+    outline:1px solid blue;
+}
+.tool-bar{
+    outline:1px solid purple;
+}
+.icon-bar{
+    background-color:lightblue;
+    width:20%;
+    overflow:auto;
+    float:right;
+}
+
+.icon-bar a{
+    float:left;
+    text-align:center;
+    width:25%;
+    transition:all 0.3s ease;
+    color:white;
+    font-size:1.5em;
+}
+
+.icon-bar a:hover{
+    background-color:blue;
+}
+
+.active{
+    background-color:blue;
+}
+
+.sme-toolbar{
+    /* outline:1px solid green; */
+    overflow:hidden;
+    background-color:lightblue;    
+}

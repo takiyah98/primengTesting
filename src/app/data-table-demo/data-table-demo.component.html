@@ -1,8 +1,16 @@
-<p>
-  data-table-demo works!
-</p>
+
 <h3 class="first">Basic</h3>
 colorEditable {{colorEditable}}
+
+<div class="sme-toolbar">
+  <div class="icon-bar">
+    <a title="home" href="#"><i class="fa fa-home"></i></a>
+    <a href="#"><i class="fa fa-search"></i></a>
+    <a href="#"><i class="fa fa-envelope"></i></a>
+    <a title="trash" href="#"><i class="fa fa-trash"></i></a>
+  </div>
+</div>
+
 
 <p-dataTable [value]="cars" [editable]="true" (onEditComplete)="folderEditComplete()">
     <p-column field="vin" header="Vin"></p-column>
